@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Un viaje interactivo y visual a través de la historia, aplicaciones y futuro utópico de la Impresión 3D, desde prototipos hasta pilares de la civilización.">
+  <title>El Viaje de la Impresión 3D: De Prototipos a Pilares de la Civilización</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#cover" class="logo" id="header-logo">
+        <span class="logo-dot"></span> Viaje 3D
+      </a>
+      <nav class="nav-links" id="main-nav">
+        <a href="#cover" class="active" id="nav-item-cover">Portada</a>
+        <a href="#timeline" id="nav-item-timeline">Historia</a>
+        <a href="#past" id="nav-item-past">Pasado</a>
+        <a href="#present" id="nav-item-present">Presente</a>
+        <a href="#future" id="nav-item-future">Futuro</a>
+        <a href="#utopia" id="nav-item-utopia">Utopía 2100</a>
+      </nav>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="page-progress"></div>
+    </div>
+  </header>
+
+  <!-- Side Floating Progress Dots Navigation -->
+  <div class="journey-dots" id="side-dots">
+    <a href="#cover" class="dot-item active" id="dot-cover" aria-label="Portada">
+      <span class="dot-label">Portada</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#timeline" class="dot-item" id="dot-timeline" aria-label="Historia">
+      <span class="dot-label">Historia de la Impresión</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#past" class="dot-item" id="dot-past" aria-label="Pasado">
+      <span class="dot-label">Usos Pasados</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#present" class="dot-item" id="dot-present" aria-label="Presente">
+      <span class="dot-label">Usos Actuales</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#future" class="dot-item" id="dot-future" aria-label="Futuro">
+      <span class="dot-label">Retos del Futuro</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#utopia" class="dot-item" id="dot-utopia" aria-label="Utopía 2100">
+      <span class="dot-label">La Utopía 2100</span>
+      <span class="dot-circle"></span>
+    </a>
+  </div>
+
+  <!-- SECTION 1: COVER (PORTADA) -->
+  <section id="cover">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="cover-layout reveal">
+        <div class="cover-content">
+          <div class="cover-meta">Nuevas Tecnologías</div>
+          <h1 class="cover-title serif-title">La Evolución y el Futuro de la Impresión 3D</h1>
+          <p class="cover-subtitle">De simples prototipos rápidos a pilares fundamentales que sostienen y reconstruyen la civilización moderna.</p>
+          
+          <div class="cover-details">
+            <span class="cover-author">Cristian Jahir Carrillo Hernández</span>
+            <span class="cover-institution">Escitec</span>
+            <span class="cover-date">17 de julio de 2026</span>
+          </div>
+          
+          <a href="#timeline" class="btn-primary" id="start-journey-btn">
+            Comenzar el Viaje
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="cover-artwork">
+          <div class="art-grid">
+            <svg class="nozzle-art" viewBox="0 0 200 200">
+              <!-- Grid simulation lines in SVG -->
+              <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="1"/>
+              <!-- Drawn Shape -->
+              <path class="nozzle-line" d="M 30 140 L 30 30 L 170 30 L 170 170 L 30 170 Z M 100 100" fill="none" stroke="var(--accent-blue)" stroke-width="2" />
+              <!-- Nozzle Head Simulation -->
+              <g class="printing-head">
+                <path d="M -6 -12 L 6 -12 L 0 0 Z" fill="var(--text-main)" />
+                <circle cx="0" cy="0" r="2" fill="var(--accent-coral)" />
+                <line x1="0" y1="0" x2="0" y2="15" stroke="var(--accent-coral)" stroke-width="1.5" stroke-dasharray="2 2" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TIMELINE (HISTORIA) -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="section-badge">Historia</span>
+        <h2 class="serif-title">El Origen: Cuatro Décadas de Desarrollo</h2>
+        <p>La manufactura aditiva comenzó como una herramienta exclusiva de laboratorios industriales y evolucionó hasta convertirse en una tecnología democratizada.</p>
+      </div>
+
+      <div class="timeline-track">
+        <div class="timeline-line"></div>
+        <div class="timeline-progress" id="timeline-scroll-progress"></div>
+
+        <!-- 1981 -->
+        <div class="timeline-item reveal" id="time-item-1981">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">1981</div>
+          <div class="timeline-card">
+            <h3>El Primer Concepto</h3>
+            <p>El Dr. Hideo Kodama en Japón desarrolla el primer método de creación rápida de prototipos utilizando fotopolímeros endurecidos mediante exposición selectiva a la luz UV.</p>
+            <span class="highlight-tag">Japón</span>
+          </div>
+        </div>
+
+        <!-- 1984 -->
+        <div class="timeline-item reveal" id="time-item-1984">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">1984</div>
+          <div class="timeline-card">
+            <h3>Estereolitografía (SLA)</h3>
+            <p>Charles Hull patenta el proceso de SLA, donde un láser UV solidifica resina líquida capa por capa. Hull funda la pionera 3D Systems y crea el formato de archivo estándar <strong>.stl</strong>.</p>
+            <span class="highlight-tag">Charles Hull</span>
+            <span class="highlight-tag">.stl</span>
+          </div>
+        </div>
+
+        <!-- 1988-1989 -->
+        <div class="timeline-item reveal" id="time-item-1988">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">1988 & 1989</div>
+          <div class="timeline-card">
+            <h3>SLS y FDM</h3>
+            <p>Carl Deckard patenta el Sinterizado Selectivo por Láser (SLS), y S. Scott Crump patenta el Modelado por Deposición Fundida (FDM), fundando Stratasys. Nacen las bases tecnológicas actuales.</p>
+            <span class="highlight-tag">SLS</span>
+            <span class="highlight-tag">FDM</span>
+          </div>
+        </div>
+
+        <!-- 1999 -->
+        <div class="timeline-item reveal" id="time-item-1999">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">1999</div>
+          <div class="timeline-card">
+            <h3>Bioimpresión Médica</h3>
+            <p>Científicos del Instituto Wake Forest para la Medicina Regenerativa imprimen una estructura o soporte sintético para una vejiga humana, abriendo el camino para la medicina regenerativa.</p>
+            <span class="highlight-tag">Medicina</span>
+            <span class="highlight-tag">Bioimpresión</span>
+          </div>
+        </div>
+
+        <!-- 2005 -->
+        <div class="timeline-item reveal" id="time-item-2005">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">2005</div>
+          <div class="timeline-card">
+            <h3>Proyecto RepRap</h3>
+            <p>El Dr. Adrian Bowyer inicia el proyecto RepRap de código abierto, diseñado para construir impresoras 3D capaces de autorreplicarse. Se sientan las bases del movimiento "maker" global.</p>
+            <span class="highlight-tag">Código Abierto</span>
+            <span class="highlight-tag">Maker</span>
+          </div>
+        </div>
+
+        <!-- 2009 -->
+        <div class="timeline-item reveal" id="time-item-2009">
+          <div class="timeline-node"></div>
+          <div class="timeline-year">2009</div>
+          <div class="timeline-card">
+            <h3>La Revolución de Escritorio</h3>
+            <p>La expiración de la patente original del proceso FDM permite que decenas de startups creen y distribuyan impresoras 3D domésticas asequibles y accesibles para todo público.</p>
+            <span class="highlight-tag">Expansión</span>
+            <span class="highlight-tag">Consumo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: USOS PASADOS -->
+  <section id="past">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="past-layout reveal">
+        <div class="past-intro">
+          <span class="section-badge">Usos Iniciales</span>
+          <h2 class="serif-title">Cómo Empezó: Un Recurso Limitado</h2>
+          <p>En sus primeras décadas, la manufactura aditiva estaba muy alejada de la producción en masa debido a factores físicos y financieros extremados.</p>
+          
+          <div class="past-intro-card">
+            <h3>Limitaciones Históricas</h3>
+            <ul class="limitations-list">
+              <li><strong>Coste prohibitivo:</strong> Las máquinas costaban decenas de miles de dólares.</li>
+              <li><strong>Dimensiones masivas:</strong> Ocupaban salas enteras de investigación.</li>
+              <li><strong>Fragilidad extrema:</strong> Materiales quebradizos, incapaces de resistir esfuerzos mecánicos.</li>
+              <li><strong>Uso netamente indirecto:</strong> Limitado exclusivamente a entornos de investigación académica y la industria pesada militar o automotriz.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="past-table-card">
+          <h4>Aplicaciones del Pasado</h4>
+          
+          <div class="sector-row">
+            <div class="sector-name">Automotriz y Aeroespacial</div>
+            <div class="sector-desc">
+              <span class="sector-use">Prototipado Rápido</span>
+              Verificación física preliminar de forma, ensamble y tamaño de piezas plásticas antes de invertir capital en costosas matrices de inyección para producción.
+            </div>
+          </div>
+
+          <div class="sector-row">
+            <div class="sector-name">Medicina</div>
+            <div class="sector-desc">
+              <span class="sector-use">Modelos Anatómicos</span>
+              Impresión de réplicas tridimensionales rígidas de huesos u órganos a partir de tomografías computarizadas (TAC) para que cirujanos practicaran cirugías de alta complejidad antes del quirófano.
+            </div>
+          </div>
+
+          <div class="sector-row">
+            <div class="sector-name">Metalurgia y Joyería</div>
+            <div class="sector-desc">
+              <span class="sector-use">Patrones de Fundición</span>
+              Creación de ceras y resinas detalladas para el método clásico de fundición de cera perdida, permitiendo moldes cerámicos de alta precisión para verter metal fundido.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: USOS ACTUALES -->
+  <section id="present">
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="section-badge">Presente</span>
+        <h2 class="serif-title">El Presente: Integración en Industrias Clave</h2>
+        <p>Hoy en día, las impresoras 3D fabrican piezas directas de uso final, funcionales y listas para instalarse. Haz clic en los sectores para ver detalles de su aplicación actual.</p>
+      </div>
+
+      <div class="present-grid">
+        <!-- Medicina y Odontología -->
+        <div class="present-card reveal delay-1" id="present-card-medicina" data-sector="medicina">
+          <div class="present-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3>Medicina y Odontología</h3>
+          <p>Prótesis personalizadas de bajo costo, alineadores dentales invisibles e implantes biocompatibles a medida.</p>
+          <div class="present-card-footer">
+            Ver detalles
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Aeroespacial -->
+        <div class="present-card reveal delay-2" id="present-card-aeroespacial" data-sector="aeroespacial">
+          <div class="present-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Industria Aeroespacial</h3>
+          <p>Piezas metálicas estructurales y componentes complejos de motores de aviación con reducción masiva de peso.</p>
+          <div class="present-card-footer">
+            Ver detalles
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Construcción -->
+        <div class="present-card reveal delay-1" id="present-card-construccion" data-sector="construccion">
+          <div class="present-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3>Construcción</h3>
+          <p>Viviendas impresas en 3D utilizando mortero extruido por grúas robóticas automatizadas en tiempo récord.</p>
+          <div class="present-card-footer">
+            Ver detalles
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Maker -->
+        <div class="present-card reveal delay-2" id="present-card-maker" data-sector="maker">
+          <div class="present-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </div>
+          <h3>Sector Doméstico y Maker</h3>
+          <p>Fabricación de repuestos y accesorios en hogares, promoviendo la filosofía del derecho a reparar.</p>
+          <div class="present-card-footer">
+            Ver detalles
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: RETOS Y OPTIMIZACIONES -->
+  <section id="future">
+    <div class="grid-bg"></div>
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="section-badge">El Futuro Inmediato</span>
+        <h2 class="serif-title">Líneas de Desarrollo e Innovación</h2>
+        <p>El horizonte a medio plazo busca pasar de la simple deposición física de plásticos y metales a la síntesis molecular y biológica autónoma.</p>
+      </div>
+
+      <div class="tabs-control reveal" id="future-tabs">
+        <button class="tab-btn active" data-tab="tab-biomed" id="tab-btn-biomed">Bioimpresión de Órganos</button>
+        <button class="tab-btn" data-tab="tab-farma" id="tab-btn-farma">Farmacias "A la Carta"</button>
+        <button class="tab-btn" data-tab="tab-espacio" id="tab-btn-espacio">Colonización Espacial (ISRU)</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="reveal" id="future-panels">
+        <!-- Panel 1: Bioimpresión -->
+        <div class="tab-panel active" id="tab-biomed">
+          <div class="panel-intro">
+            <h3>Bioimpresión de Órganos</h3>
+            <p>La síntesis directa de órganos humanos funcionales y tejidos complejos a partir de las propias células madre del paciente.</p>
+            <p>Representa una de las fronteras médicas más revolucionarias del siglo, capaz de redefinir la esperanza de vida humana.</p>
+          </div>
+          <div class="cards-stack">
+            <div class="future-card benefits">
+              <div class="future-card-title">Beneficios Esperados</div>
+              <div class="future-card-content">Fin definitivo de las listas de espera de donantes y eliminación total del rechazo inmunológico del organismo.</div>
+            </div>
+            <div class="future-card challenges">
+              <div class="future-card-title">Desafíos Actuales</div>
+              <div class="future-card-content">Imprimir y mantener estables redes capilares microscópicas (microvascularización) para oxigenar las capas internas.</div>
+            </div>
+            <div class="future-card optimization">
+              <div class="future-card-title">Optimización Propuesta</div>
+              <div class="future-card-content">Uso de biorreactores avanzados e Inteligencia Artificial para modelar con precisión los vasos y simular el flujo antes de imprimir.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Farmacias a la carta -->
+        <div class="tab-panel" id="tab-farma">
+          <div class="panel-intro">
+            <h3>Farmacias "A la Carta"</h3>
+            <p>La impresión de medicamentos personalizados a nivel molecular, ajustando la dosis exacta en función de la genética, edad y peso del paciente.</p>
+            <p>Este cambio estructural descentraliza la producción de medicamentos masiva hacia farmacias locales o incluso hogares.</p>
+          </div>
+          <div class="cards-stack">
+            <div class="future-card benefits">
+              <div class="future-card-title">Beneficios Esperados</div>
+              <div class="future-card-content">Medicina altamente hiperpersonalizada y la consolidación de múltiples fármacos diferentes dentro de una sola píldora diaria.</div>
+            </div>
+            <div class="future-card challenges">
+              <div class="future-card-title">Desafíos Actuales</div>
+              <div class="future-card-content">Riesgos latentes de ciberseguridad, como el hackeo remoto de recetas o la producción ilegal de sustancias controladas.</div>
+            </div>
+            <div class="future-card optimization">
+              <div class="future-card-title">Optimización Propuesta</div>
+              <div class="future-card-content">Autenticación encriptada por redes Blockchain y sensores médicos para ajustar las dosis en tiempo real.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Colonización Espacial -->
+        <div class="tab-panel" id="tab-espacio">
+          <div class="panel-intro">
+            <h3>Colonización Espacial (ISRU)</h3>
+            <p>La Utilización de Recursos In Situ (ISRU, por sus siglas en inglés) permite fabricar hábitats, herramientas y repuestos directamente en otros mundos.</p>
+            <p>Es la piedra angular logística necesaria para hacer que la exploración de la Luna y Marte sea económicamente sostenible.</p>
+          </div>
+          <div class="cards-stack">
+            <div class="future-card benefits">
+              <div class="future-card-title">Beneficios Esperados</div>
+              <div class="future-card-content">Construcción robótica de refugios seguros utilizando polvo lunar o marciano (regolito), ahorrando miles de millones en envíos desde la Tierra.</div>
+            </div>
+            <div class="future-card challenges">
+              <div class="future-card-title">Desafíos Actuales</div>
+              <div class="future-card-content">Entornos extremadamente hostiles, alta radiación solar y desgaste acelerado por el polvo abrasivo lunar.</div>
+            </div>
+            <div class="future-card optimization">
+              <div class="future-card-title">Optimización Propuesta</div>
+              <div class="future-card-content">Calibración en tiempo real mediante algoritmos de Machine Learning y diseño robótico con redundancias mecánicas autorreparables.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: LA UTOPIA 2100 -->
+  <section id="utopia">
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="section-badge" style="color: var(--accent-green); background: var(--accent-green-light)">La Utopía</span>
+        <h2 class="serif-title">Año 2100: La Era de la Abundancia</h2>
+        <p>En esta visión futurista, la manufactura 3D a nivel molecular se consolida como el pilar fundamental que sostiene la equidad y el desarrollo de la civilización.</p>
+      </div>
+
+      <div class="utopia-grid">
+        <!-- Autosuficiencia -->
+        <div class="utopia-card reveal delay-1" id="utopia-card-descentralizacion">
+          <div class="utopia-badge">Descentralización</div>
+          <h3>Autosuficiencia y Nodos de Síntesis</h3>
+          <p>La dependencia de cadenas de suministro globales ha desaparecido por completo. Municipios remotos son autosuficientes gracias a los <strong>Núcleos de Síntesis</strong>, capaces de imprimir desde infraestructura pesada hasta bienes de consumo diario, garantizando la abundancia material como un derecho básico.</p>
+        </div>
+
+        <!-- Código Abierto -->
+        <div class="utopia-card reveal delay-2" id="utopia-card-open-source">
+          <div class="utopia-badge">Bienes Comunes</div>
+          <h3>El Código Abierto Universal</h3>
+          <p>Las patentes restrictivas ya no existen. Todo objeto físico y diseño molecular pertenece a los bienes comunes digitales. Planos de ingeniería complejos se distribuyen y compilan globalmente en segundos. Cualquier persona puede materializar y mejorar innovaciones al instante.</p>
+        </div>
+
+        <!-- Entornos de Vida Fluidos -->
+        <div class="utopia-card reveal delay-1" id="utopia-card-entornos">
+          <div class="utopia-badge">Adaptabilidad</div>
+          <h3>Entornos de Vida Fluidos</h3>
+          <p>A través de la impresión con biopolímeros 4D, los espacios físicos son completamente modulares y reaccionan a nuestras necesidades cotidianas. Las habitaciones reconfiguran mobiliario ergonómico de oficina de forma automatizada y se desintegran al terminar la jornada, integrando vida y trabajo.</p>
+        </div>
+
+        <!-- Economía Circular -->
+        <div class="utopia-card reveal delay-2" id="utopia-card-circular">
+          <div class="utopia-badge">Sostenibilidad</div>
+          <h3>Economía Circular y Restaurativa</h3>
+          <p>La basura y los vertederos ya no existen. Las impresoras ejecutan desensamblajes moleculares de objetos obsoletos para revertirlos a "tinta base" pura. En paralelo, flotas de drones-impresores autónomos purifican la biosfera, transformando contaminantes y plásticos en nuevos arrecifes biológicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3D Printer Simulator Widget -->
+  <div class="simulator-widget" id="printer-sim">
+    <button class="simulator-toggle" id="sim-toggle-btn" aria-label="Abrir simulador de impresión 3D">🖨️</button>
+    
+    <div class="simulator-panel" id="sim-panel">
+      <div class="sim-header">
+        <span class="sim-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 16 20 20 24 16"></polyline>
+            <path d="M20 20V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12"></path>
+          </svg>
+          Simulador 3D en Vivo
+        </span>
+        <button class="sim-close" id="sim-close-btn" aria-label="Cerrar panel">&times;</button>
+      </div>
+      
+      <div class="sim-bed">
+        <div class="sim-bed-grid"></div>
+        <div class="sim-nozzle" id="nozzle-head">
+          <div class="sim-nozzle-beam" id="nozzle-beam"></div>
+        </div>
+        
+        <!-- Interactive SVGs inside the printing bed -->
+        <svg class="sim-svg" id="printing-svg" viewBox="0 0 100 100">
+          <!-- Gear Path -->
+          <path id="svg-shape-gear" d="M50,30 A20,20 0 0,0 50,70 A20,20 0 0,0 50,30 Z M50,42 A8,8 0 1,1 50,58 A8,8 0 1,1 50,42 Z" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" style="display: none;" />
+          
+          <!-- House Path -->
+          <path id="svg-shape-house" d="M20,80 L20,50 L50,20 L80,50 L80,80 Z M35,80 L35,60 L65,60 L65,80 Z" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" style="display: none;" />
+          
+          <!-- Heart Path -->
+          <path id="svg-shape-heart" d="M50,80 C15,50 10,25 35,15 C45,11 50,25 50,25 C50,25 55,11 65,15 C90,25 85,50 50,80 Z" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" style="display: none;" />
+          
+          <!-- Atom Path -->
+          <path id="svg-shape-atom" d="M50,15 A35,12 0 1,1 50,85 A35,12 0 1,1 50,15 Z M20,35 A12,35 0 1,1 80,65 A12,35 0 1,1 20,35 Z" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000" style="display: none;" />
+        </svg>
+      </div>
+      
+      <div class="sim-options">
+        <select class="sim-object-select" id="sim-shape-select">
+          <option value="gear">Engranaje Mecánico (Pasado)</option>
+          <option value="house">Casa con Mortero (Presente)</option>
+          <option value="heart">Órgano Biológico (Futuro)</option>
+          <option value="atom">Síntesis Molecular (Utopía)</option>
+        </select>
+        <button class="sim-btn-print" id="sim-print-btn">
+          Imprimir Capa por Capa
+        </button>
+      </div>
+      
+      <div class="sim-status" id="sim-status-text">Listo para imprimir</div>
+    </div>
+  </div>
+
+  <!-- Detail Modal for Interactive Present Cards -->
+  <div class="detail-modal" id="sector-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <div class="modal-icon" id="modal-icon-container">
+        <!-- SVG injected dynamically -->
+      </div>
+      <h3 class="modal-title" id="modal-title-text">Título del Sector</h3>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
